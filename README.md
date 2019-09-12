@@ -30,10 +30,36 @@ npm install vue-leon --save
 
 ### Importing the library in Webpack / Rollup
 
-Now the code of vue-leon is split component by component (while using a bundler like Webpack/Rollup/Parcel) to do so the following syntax is not working anymore:
+```html
+<template>
+  <vue-leon ref="leon" :options="options" :controll="controll"></vue-leon>
+</template>
+```
 
 ```javascript
 import VueLeon from "vue-leon";
+
+export default {
+  components: {
+    VueLeon
+  },
+  data() {
+    return {
+      options: {
+        text: "Hello World",
+        size: 100,
+        weight: 200
+      },
+      controll: {
+        points: false,
+        box: false,
+        grids: false,
+        roundCap: false,
+        multiply: false
+      }
+    };
+  }
+};
 ```
 
 This will reduce the size of the bundle significantly
@@ -45,8 +71,6 @@ Coming soon
 ## Authors
 
 Mudin Ibrahim
-
-Inspired by many map wrapper (google and leaflet) for many framework (React, Angular and Vue 1.0)
 
 ## Contributors
 

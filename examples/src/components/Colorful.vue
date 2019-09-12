@@ -24,7 +24,6 @@ export default {
         text: "Hello I am colorful",
         size: 120,
         breakWord:true,
-        maxWidth:100,
         isColorful:true,
         weight: 200
       },
